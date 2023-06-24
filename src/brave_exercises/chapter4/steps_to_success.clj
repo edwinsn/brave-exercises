@@ -2,12 +2,10 @@
   (:require [brave-exercises.chapter4.lib :as lib])
   )
 
-;An brave ant walks towards his house, 1 meter appart, but she is tired, every new step takes her a ledd of the previous step
+;A brave ant walks towards his house, 1 meter apart, but she is tired, every new step takes her less of the previous step
 ;she starts with 1 centimeter then a half, then a third and so on (1 1/3 1/4 1/5 ...), every time slower.
-;But she is determined, she will never stop! She will make the necesary steps
+;But she is determined, she will never stop! She will make the necessary steps
 ;Will she arrive?
-
-;Create a lazy sequence, hey!!! the ant is not lazy, carefull of what you think!
 
 
 (let [steps (map (fn [x] (/ 1 x)) (iterate inc 1))]
